@@ -1,0 +1,39 @@
+{
+    "name": "nathandaly/laravel-n8n",
+    "description": "Laravel package for n8n integration",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Daly",
+            "email": "justlikephp@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NateDaly\\N8n\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NateDaly\\LaravelN8n\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NateDaly\\LaravelN8n\\LaravelN8nServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
