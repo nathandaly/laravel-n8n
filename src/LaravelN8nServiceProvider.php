@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NateDaly\LaravelN8n;
+namespace NateDaly\N8n;
 
 use Illuminate\Support\ServiceProvider;
 

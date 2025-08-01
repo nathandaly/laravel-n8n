@@ -24,13 +24,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "NateDaly\\LaravelN8n\\Tests\\": "tests/"
+            "NateDaly\\N8n\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NateDaly\\LaravelN8n\\LaravelN8nServiceProvider"
+                "NateDaly\\N8n\\LaravelN8nServiceProvider"
             ]
         }
     },
