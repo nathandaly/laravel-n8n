@@ -11,10 +11,12 @@ return [
     */
 
     'base_url' => env('N8N_BASE_URL', 'http://localhost:5678'),
-    
+
     'api_key' => env('N8N_API_KEY'),
-    
+
+    'api_token' => env('N8N_API_TOKEN'),
+
     'webhook_path' => env('N8N_WEBHOOK_PATH', '/webhook'),
-    
+
     'timeout' => env('N8N_TIMEOUT', 30),
 ];

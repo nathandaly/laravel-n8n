@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace NateDaly\N8n;
 
 use Illuminate\Support\ServiceProvider;
+use NateDaly\N8n\Http\N8nConnector;
 
 class LaravelN8nServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,8 @@ class LaravelN8nServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/laravel-n8n.php', 'laravel-n8n'
         );
+
+        N8nConnector::register($this->app);
     }
 
     /**
