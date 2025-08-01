@@ -14,8 +14,11 @@
         "illuminate/support": "^10.0|^11.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^8.0|^9.0",
-        "phpunit/phpunit": "^10.0"
+        "orchestra/testbench": "^9.14",
+        "phpunit/phpunit": "^10.0",
+        "pestphp/pest": "^2.36",
+        "phpstan/phpstan": "^2.1",
+        "laravel/pint": "^1.24"
     },
     "autoload": {
         "psr-4": {
@@ -27,6 +30,13 @@
             "NateDaly\\N8n\\Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "test": "@php -dxdebug.mode=off vendor/bin/pest",
+        "analyse": "@php ./vendor/bin/phpstan analyse",
+        "testbench": [
+            "@php -dxdebug.mode=off vendor/bin/testbench"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -35,5 +45,10 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
